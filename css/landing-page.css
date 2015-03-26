@@ -22,7 +22,7 @@ h6 {
 }
 
 .topnav {
-    font-size: 14px; 
+    font-size: 16px; 
 }
 
 .lead {
@@ -83,6 +83,13 @@ h6 {
     .intro-divider {
         width: 100%;
     }
+}
+
+.full-iframe { 
+    padding-top: 50px;
+    width:100% ;
+    height:100% ;
+    border:none ;
 }
 
 .network-name {
