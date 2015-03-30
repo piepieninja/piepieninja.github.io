@@ -1,12 +1,6 @@
 /*!
- * Additions by Caleb Adams
- *
- * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
-/*!
+* Additions by Caleb Adams
+*
 * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
 * Code licensed under the Apache License v2.0.
 * For details, see http://www.apache.org/licenses/LICENSE-2.0.
@@ -40,6 +34,7 @@ text-align: center;
 color: #f8f8f8;
 background: url(../img/alma.jpg) no-repeat center center;
 background-size: cover;
+width: 100%;
 }
 .intro-message {
 position: relative;
@@ -59,7 +54,7 @@ border-bottom: 1px solid rgba(0,0,0,0.2);
 .intro-message > h3 {
 text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
-@media(max-width:767px) {
+@media all and (max-width: 767px) {
 .intro-message {
 padding-bottom: 15%;
 }
@@ -77,6 +72,20 @@ margin-bottom: 0;
 .intro-divider {
 width: 100%;
 }
+}
+.full-iframe {
+padding-top: 50px;
+width: 100%;
+height: 100%;
+border: none;
+}
+@media all and (max-width: 767px) {
+.full-iframe {
+height:75%;
+}
+}
+.foot-displace {
+padding-top: 90%;
 }
 .network-name {
 text-transform: uppercase;
@@ -119,13 +128,13 @@ margin-bottom: 0;
 float: right;
 margin-top: 0;
 }
-@media(max-width:1199px) {
+@media all and (max-width: 1199px) { /* was 1199? */
 ul.banner-social-buttons {
 float: left;
 margin-top: 15px;
 }
 }
-@media(max-width:767px) {
+@media all and (max-width: 767px) {
 .banner h2 {
 margin: 0;
 text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
