@@ -64,7 +64,7 @@ h6 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
-@media all and (max-width: 1081px) {
+@media all and (max-width: 767px) {
     .intro-message {
         padding-bottom: 15%;
     }
@@ -95,7 +95,7 @@ h6 {
     border: none;
 }
 
-@media all and (max-width: 1081px) {
+@media all and (max-width: 767px) {
     .full-iframe {
         height:75%;
     }
@@ -155,14 +155,14 @@ h6 {
     margin-top: 0;
 }
 
-@media all and (max-width: 1081px) { /* was 1199? */
+@media all and (max-width: 1199px) { /* was 1199? */
     ul.banner-social-buttons {
         float: left;
         margin-top: 15px;
     }
 }
 
-@media all and (max-width: 1081px) {
+@media all and (max-width: 767px) {
     .banner h2 {
         margin: 0;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
