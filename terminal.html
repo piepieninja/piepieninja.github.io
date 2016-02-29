@@ -15,13 +15,15 @@
     <canvas id="myCanvas">Your browser does not support the canvas tag.</canvas>
     <script>
       var canvas = document.getElementById('myCanvas');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
       var ctx = canvas.getContext('2d');
       var cursorOn=1,cursX=10, cursY=30;
       var textColor ="lawngreen";
       
       function displayTerm(){
       ctx.fillStyle  = "black";
-      ctx.fillRect(0,0,window.screen.availHeight,window.screen.availWidth);
+      ctx.fillRect(0,0,canvas.width,canvas.height);
       ctx.fillStyle = textColor;
       ctx.font = "12px Courier New";
       type("CalebDevelops.com UNIX shell loading...");
