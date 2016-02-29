@@ -5,6 +5,9 @@
 <html>
   <head>
   <style>
+    html {
+    background: #000000
+    }
     canvas {
     width:100%;
     height:100%;
@@ -20,50 +23,82 @@
       var ctx = canvas.getContext('2d');
       var cursorOn=1,cursX=10, cursY=30;
       var textColor ="lawngreen";
-      
+
+      var tbl = [ "", /* 1 */
+                "","","","","","","","","","", /* 10 */
+                "","","","","","","","","","", /* 20 */
+                "","","","","","","","","","", /* 30 */
+                "","","","","","","","","","", /* 40 */
+                "","","","","","","","","","", /* 50 */
+                "","","","","","","","","","", /* 60 */
+                "","","","","a","b","c","d","e","f", /* 70 */
+                "g","h","i","j","k","l","m","n","o","p", /* 80 */
+                "q","r","s","t","u","v","w","x","y","z", /* 90 */
+                "","","","","","","","","","", /* 100 */
+                "","","","","","","","","","", /* 110 */
+                "","","","","","","","","","", /* 120 */
+                "","","","","","","","","",""]; /* 130 */
+
       function displayTerm(){
       ctx.fillStyle  = "black";
       ctx.fillRect(0,0,canvas.width,canvas.height);
       ctx.fillStyle = textColor;
       ctx.font = "12px Courier New";
       type("CalebDevelops.com UNIX shell loading...");
-      newline(2);
-      type("Login: "); 
+      newline(1);
+      prompt();
       }
-      
+
+      function prompt(){
+      type("User@CalebDevelops.com $");
+      }
+
       function newline(n){
       cursX=10; cursY+=15*n;
       }
-      
+
       function type(string){
       ctx.fillText(string,cursX,cursY);
       cursX+=string.length*8;
       }
-      
+
       function flashCursor(){
       if(cursorOn==1) {ctx.fillStyle = textColor; ctx.fillRect(cursX,cursY-11,7,14);}
       else {cursorOff();}
       cursorOn=-cursorOn;
       }
-      
+
       function cursorOff(){
       ctx.fillStyle = "black";
       ctx.fillRect(cursX,cursY-11,7,14);
       }
 
+      function determineInput(n){
+        if (n == 13){
+          newline(1);
+          prompt();
+          return "";
+        }
+        else {
+          return tbl[n];
+          /* return n for debug */
+        }
+      }
+
       function doKeyDown(evt){
       cursorOff();
-      if(evt.keyCode==13){ newline(1); return;}
+      /*if(evt.keyCode==13){ newline(1); return;}*/
       ctx.fillStyle = textColor;
-      ctx.fillText(evt.keyCode,cursX,cursY);
+      ctx.fillText(determineInput(evt.keyCode),cursX,cursY);
       cursX+=8;
-      if(cursX>480) {newline(1);}
+      if(cursX>canvas.width) { /* enter */
+      newline(1);}
       }
-      
+
       displayTerm();
       window.addEventListener('keydown',doKeyDown,true);
       setInterval('flashCursor()',500);
-      
+
     </script>
   </body>
 </html>
