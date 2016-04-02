@@ -1,6 +1,8 @@
 <html>
 <head>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
 </head>
 <body>
 <script>
@@ -46,17 +48,41 @@
 html {
   background-color: #D8E6E7;
 }
-#countdown {
-  color: #77AAAD;
+p {
   text-align: center;
-  text-shadow: 1px 1px #6E7783;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size: 144;
-  padding-top: 30vh;
+  color: #EE7785;
+}
+p i {
+  text-align: center;
+  color: #EE7785;
+}
+@media only screen and (max-width: 768px) {
+  #countdown {
+    color: #77AAAD;
+    text-align: center;
+    text-shadow: 1px 1px #6E7783;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 40;
+    padding-top: 25vh;
 
+  }
+}
+@media only screen and (min-width: 768px) {
+  #countdown {
+    color: #77AAAD;
+    text-align: center;
+    text-shadow: 1px 1px #6E7783;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 144;
+    padding-top: 25vh;
+
+  }
 }
 </style>
 <div id="countdown"></div>
+<br>
+<p><i class="fa fa-heart fa-5x"></i></p>
 </body>
 </html>
