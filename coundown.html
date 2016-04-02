@@ -1,0 +1,62 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<script>
+
+    CountDownTimer('05/20/2016 10:1 AM', 'countdown');
+
+    function CountDownTimer(dt, id)
+    {
+        var end = new Date(dt);
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(timer);
+                document.getElementById(id).innerHTML = 'EXPIRED!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById(id).innerHTML = days + ':';
+            document.getElementById(id).innerHTML += hours + ':';
+            document.getElementById(id).innerHTML += minutes + ':';
+            document.getElementById(id).innerHTML += seconds + '';
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    }
+
+</script>
+<style>
+html {
+  background-color: #D8E6E7;
+}
+#countdown {
+  color: #77AAAD;
+  text-align: center;
+  text-shadow: 1px 1px #6E7783;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 144;
+  padding-top: 30vh;
+
+}
+</style>
+<div id="countdown"></div>
+</body>
+</html>
