@@ -164,3 +164,9 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+/* custom so that the social links don't looke terrible */
+
+.list-inline > li {
+    padding: 10px;
+}
