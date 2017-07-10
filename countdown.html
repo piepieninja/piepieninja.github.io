@@ -58,10 +58,10 @@ p i {
   color: #EE7785;
 }
 @media only screen and (max-width: 768px) {
-  #countdown {
-    color: #77AAAD;
+  #countdown-neon {
+    color: #FF6AD5;
     text-align: center;
-    text-shadow: 1px 1px #C774E8;
+    text-shadow: 0 0 3vw #C774E8;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 40;
@@ -70,16 +70,31 @@ p i {
   }
 }
 @media only screen and (min-width: 768px) {
-  #countdown {
-    color: #77AAAD;
+  #countdown-neon {
+    color: #FF6AD5;
     text-align: center;
-    text-shadow: 1px 1px #6E7783;
+    text-shadow: 0 0 3vw #C774E8;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 144;
     padding-top: 25vh;
-
   }
+#countdown-neon {
+  animation: neon 6s ease infinite;
+  -moz-animation: neon 6s ease infinite;
+  -webkit-animation: neon 6s ease infinite;
+}
+@keyframes neon {
+  0%,
+  100% {
+    ttext-shadow: 0 0 .5vw #94D0FF, 0 0 1.5vw #94D0FF, 0 0 5vw #94D0FF, 0 0 5vw #94D0FF, 0 0 .2vw #94D0FF, .5vw .5vw .1vw #8795E8;
+    color: #FF6AD5;
+  }
+  50% {
+    text-shadow: 0 0 1vw #C774E8, 0 0 2vw #C774E8, 0 0 5vw #C774E8, 0 0 5vw #C774E8, 0 0 .2vw #AD8CFF, .5vw .5vw .1vw #AD8CFF;
+    color: #FBC1FC;
+  }
+}
 }
 </style>
 <div id="countdown"></div>
