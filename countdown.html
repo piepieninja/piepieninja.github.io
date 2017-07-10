@@ -7,7 +7,7 @@
 <body>
 <script>
 
-    CountDownTimer('07/24/2017 12:00 AM', 'countdown');
+    CountDownTimer('07/24/2017 12:00 AM', 'countdown-neon');
 
     function CountDownTimer(dt, id)
     {
@@ -66,6 +66,9 @@ p i {
     font-weight: 300;
     font-size: 40;
     padding-top: 25vh;
+    animation: neon 2s ease infinite;
+   -moz-animation: neon 2s ease infinite;
+   -webkit-animation: neon 2s ease infinite;
 
   }
 }
@@ -78,11 +81,11 @@ p i {
     font-weight: 300;
     font-size: 144;
     padding-top: 25vh;
-  }
-#countdown-neon {
-  animation: neon 6s ease infinite;
-  -moz-animation: neon 6s ease infinite;
-  -webkit-animation: neon 6s ease infinite;
+    animation: neon 2s ease infinite;
+   -moz-animation: neon 2s ease infinite;
+   -webkit-animation: neon 2s ease infinite;
+
+}
 }
 @keyframes neon {
   0%,
@@ -99,6 +102,6 @@ p i {
 </style>
 <div id="countdown-neon"></div>
 <br>
-<p><i class="fa fa-rocket fa-5x"></i></p>
+<p><i class="fa fa-rocket fa-5x neon"></i></p>
 </body>
 </html>
