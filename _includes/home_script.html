@@ -1,0 +1,150 @@
+<script>
+  var container;
+  var kill_num = 0;
+  var first_guy = true;
+  var camera, scene, renderer;
+
+  var geometry, texture, material, mesh;
+  var r_r_x = 0;
+  var r_r_y = 0;
+  var r_r_z = 0;
+
+  init();
+  animate();
+
+  function init() {
+
+    container = document.createElement( 'div' );
+    document.body.appendChild( container );
+
+    camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 10000 );
+    camera.position.z = 200;
+
+    scene = new THREE.Scene();
+
+    var planeGeometry = new THREE.PlaneGeometry( 8000, 8000 );
+    planeGeometry.rotateX( - Math.PI / 2 );
+    var planeMaterial = new THREE.ShadowMaterial( { opacity: 1 } );
+
+    var plane = new THREE.Mesh( planeGeometry, planeMaterial );
+    plane.position.y = 0;
+    plane.receiveShadow = true;
+    scene.add( plane );
+
+    var helper = new THREE.GridHelper( 10000, 500 );
+    helper.position.y = -50;
+    helper.material.opacity = 0.5;
+    helper.material.transparent = true;
+    scene.add( helper );
+
+    renderer = new THREE.WebGLRenderer();
+    renderer.setClearColor( 0xFBC6D2 );
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    container.appendChild( renderer.domElement );
+
+    // postprocessing
+    composer = new THREE.EffectComposer( renderer );
+    composer.addPass( new THREE.RenderPass( scene, camera ) );
+    var effect = new THREE.ShaderPass( THREE.DotScreenShader );
+    effect.uniforms[ 'scale' ].value = 100;
+    composer.addPass( effect );
+    var effect = new THREE.ShaderPass( THREE.RGBShiftShader );
+    effect.uniforms[ 'amount' ].value = 0.00015;
+    effect.renderToScreen = true;
+    composer.addPass( effect );
+
+    window.addEventListener( 'resize', onWindowResize, false );
+
+  }
+
+  function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    composer.setSize( window.innerWidth, window.innerHeight );
+  }
+
+  function createImage() {
+
+    var canvas = document.createElement( 'canvas' );
+    canvas.width = 256;
+    canvas.height = 256;
+
+    var context = canvas.getContext( '2d' );
+    context.fillStyle = 'rgb(' + Math.floor( Math.random() * 256 ) + ',' + Math.floor( Math.random() * 256 ) + ',' + Math.floor( Math.random() * 256 ) + ')';
+    context.fillRect( 0, 0, 256, 256 );
+
+    return canvas;
+
+  }
+
+  function animate() {
+
+    requestAnimationFrame( animate );
+    // composer.render();
+    render();
+
+  }
+
+  function should_kill(i){
+    kill_num += i;
+    if (kill_num > 255){
+      kill_num = 0;
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  function render() {
+
+    if (should_kill(2) || first_guy) {
+      first_guy = false;
+
+      try {
+        scene.remove( mesh );
+
+        // clean up
+
+        geometry.dispose();
+        material.dispose();
+        texture.dispose();
+      } catch (e){
+
+      }
+
+      geometry = new THREE.SphereBufferGeometry( 50, Math.random() * 64, Math.random() * 32 );
+      texture = new THREE.CanvasTexture( createImage() );
+      material = new THREE.MeshBasicMaterial( { map: texture, wireframe: true } );
+      mesh = new THREE.Mesh( geometry, material );
+
+      scene.add( mesh )
+
+      r_r_x = Math.random()/30;
+      if (Math.random() > .5){
+        r_r_y = Math.random()/30;
+      }
+      r_r_z = Math.random()/30;
+
+    }
+
+    renderer.render( scene, camera );
+
+    mesh.rotation.x += r_r_x;
+    mesh.rotation.y += r_r_y;
+    mesh.rotation.z += r_r_z;
+
+    scene.rotation.y += 0.001;
+    // composer.render();
+}
+
+jQuery(document).ready(function(){
+   $('body').mousemove(function(e){
+     var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
+     var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
+     $('h1').css('text-shadow', +rYP/100+'px '+rXP/800+'px rgba(227,6,19,.8), '+rYP/80+'px '+rXP/600+'px rgba(255,237,0,1), '+rXP/700+'px '+rYP/120+'px rgba(0,159,227,.7)');
+   });
+});
+</script>
