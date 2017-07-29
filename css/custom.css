@@ -25,6 +25,7 @@ p, a, li, ul, h1, h2, h3, h4, h5 {
 
 p {
   color: black;
+  font-size: 16px;
 }
 
 .navbar-brand {
@@ -54,4 +55,20 @@ p {
   font-family: 'VT323', monospace;
   font-style: bold;
   font-size: 64px !important;
+}
+
+.content-holder {
+  position: absolute;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 80px;
+  width: 80%;
+  background-color: white;
+}
+
+.content-pad {
+  margin-top: 30px;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
