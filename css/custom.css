@@ -1,0 +1,74 @@
+@font-face {
+      font-family: 'VCR';
+      src: url('../font/VCR_OSD_MONO_1.001.tff');
+}
+
+body {
+  background:#fff;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+}
+
+nav, .navbar-fixed-top, .navbar-default, .navbar, .navbar-toggle {
+  background-color: #aae1ec !important;
+  border: none;
+}
+
+.icon-bar {
+  color: #9BA0DC !important;
+}
+
+p, a, li, ul, h1, h2, h3, h4, h5 {
+  font-family: 'VT323', monospace !important;
+}
+
+p {
+  color: black;
+  font-size: 16px;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
+.p-link {
+  font-size: 18px;
+}
+
+.navbar-brand, .p-link {
+  color: #9BA0DC !important;
+  font-family: 'VT323', monospace;
+}
+
+.navbar-brand:hover, .p-link:hover {
+  color: #ef70d2 !important;
+}
+
+.h1-landing {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0px;
+  color: white;
+  font-family: 'VT323', monospace;
+  font-style: bold;
+  font-size: 64px !important;
+}
+
+.content-holder {
+  position: absolute;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 80px;
+  width: 80%;
+  background-color: white;
+}
+
+.content-pad {
+  margin-top: 30px;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}

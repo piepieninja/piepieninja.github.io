@@ -1,0 +1,45 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://calebdevelops.com
+title: Caleb Adams
+email: CalebAshmoreAdams@gmail.com
+author: Caleb Adams
+description: Caleb Adams is a systems engineer who specializes in the design, build, and testing of space systems. Caleb Adams founded the UGA Small Satellite Research Laboritory and is currently leading 2 missions into Low Earth Orbit.
+copyright: 'Copyright &copy; 2016 Caleb Adams. All Rights Reserved.'
+credits: 'Credits: Landing Page is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com/">Start Bootstrap</a>. Small edits have been made by Caleb and pages other than the landing page are custom.'
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+custom-pages:
+  - title: Research
+    url: /
+  - title: Projects
+    url: /
+  - title: Contact
+    url: /
+  - title: Resume & CV
+    url: /
+
+social:
+  - title: twitter
+    url: https://twitter.com/piepieninja
+  - title: github
+    url: https://github.com/piepieninja
+  - title: linkedin
+    url: https://www.linkedin.com/pub/caleb-adams/68/331/754
+  - title: stack-overflow
+    url: http://stackoverflow.com/users/3704230/caleb-adams
+  # - title: tumblr
+  #   url: http://astronomicalwonders.tumblr.com/
