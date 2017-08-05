@@ -15,6 +15,14 @@ nav, .navbar-fixed-top, .navbar-default, .navbar, .navbar-toggle {
   border: none;
 }
 
+img {
+  width: 250px;
+}
+
+small {
+  font-size: 12px;
+}
+
 canvas {
   overflow:hidden;
 }
