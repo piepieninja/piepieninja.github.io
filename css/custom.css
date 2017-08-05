@@ -15,6 +15,10 @@ nav, .navbar-fixed-top, .navbar-default, .navbar, .navbar-toggle {
   border: none;
 }
 
+canvas {
+  overflow:hidden;
+}
+
 .icon-bar {
   color: #9BA0DC !important;
 }
@@ -23,9 +27,9 @@ p, a, li, ul, h1, h2, h3, h4, h5 {
   font-family: 'VT323', monospace !important;
 }
 
-p {
+p, ul {
   color: black;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .navbar-brand {
@@ -58,15 +62,18 @@ p {
 }
 
 .content-holder {
-  position: absolute;
+  position: fixed;
+  overflow: auto;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 80px;
   width: 80%;
   background-color: white;
+  height: 85%;
 }
 
 .content-pad {
+  /*overflow: auto;*/
   margin-top: 30px;
   margin-top: 30px;
   margin-left: 50px;

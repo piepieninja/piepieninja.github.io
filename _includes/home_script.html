@@ -145,6 +145,7 @@ jQuery(document).ready(function(){
      var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
      var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
      $('h1').css('text-shadow', +rYP/100+'px '+rXP/800+'px rgba(227,6,19,.8), '+rYP/80+'px '+rXP/600+'px rgba(255,237,0,1), '+rXP/700+'px '+rYP/120+'px rgba(0,159,227,.7)');
+     $('canvas').css('overflow:hidden;');
    });
 });
 </script>
