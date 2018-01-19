@@ -1,0 +1,363 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% this was taken from 
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+
+
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{Caleb Ashmore Adams}{Space Systems, Computation, Science}{Last update on \today}
+
+\nobreakvspace{0.6em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\href{mailto:CalebAshmoreAdams@gmail.com}{CalebAshmoreAdams\mbox{}@\mbox{}gmail.com}
+
+\href{http://calebdevelops.com}{www.calebdevelops.com}
+%Athens \sbull Georiga\thinspace\sbull United States
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\spacedhrule{0.5em}{-0.4em}
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Education}
+
+\headedsection
+  {\href{http://uga.edu}{University of Georgia}}
+  {\textsc{Athens, GA}} {%
+  \headedsubsection
+    {Bachelor degree in Computer Science}
+    {2012 -- 2018}
+    {\bodytext{}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% horizontal line
+\spacedhrule{0em}{-0.4em}
+\roottitle{Experience}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://smallsat.uga.edu}{University of Georgia Small Satellite Research Laboratory}}
+  {\textsc{Athens, GA}} {%
+  \headedsubsection
+    {Founder, Program Manager}
+    {January \apo16 -- present}
+    {\bodytext{The University of Georgia Small Satellite Research Laboratory (UGA SSRL) was founded when I decided to form a team to build a small 1U cube satellite. The UGA SSRL now includes over 40 undergraduate researchers, several faculty researchers, a space act agreement with NASA Ames, a partnership with the Air Force Research Laboratory (AFRL), and more.}}
+  \headedsubsection
+    {MOCI}
+    {January \apo16 -- present}
+    {\bodytext{The Multiview Onboard Computational Imager (MOCI) is a 3U cube satellite funded by the Air Force Research Laboratory's (AFRL) University Program (UNP) NS-9. The MOCI satellite shall use advanced computer vision algorithms and specialized computational hardware to generate 3D digital surface models of the earth in real time. The MOCI satellite is scheduled to launch in Q1 of 2020.}}
+  \headedsubsection
+    {SPOC}
+    {January \apo16 -- present}
+    {\bodytext{The Spectral Ocean Color (SPOC) satellite is a 3U cube satellite funded by NASA's Undergraduate Student Instrument Project (USIP) and was selected for NASA's Cube Satellite Launch Initiative (CSLI) for a launch in Q4 of 2019. The SPOC satellite shall use a custom hyperspectrial sensor to analyze the coastal ecosystems of the Georgia coast.}}
+}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\href{http://nasa.gov}{NASA}}
+  {\textsc{Houston, TX}} {%
+  \headedsubsection
+    {Core Flight Software Programmer}
+    {April \apo15 -- August \apo15}
+    {\bodytext{I helped develop Core Flight Software (CFS) to handle audio telemetry and communication for the Orion spacecraft in a simulated lab setting. I also worked in an audio lab with embedded systems for audio equipment.}}
+  \headedsubsection
+    {Human Systems Integration}
+    {April \apo15 -- August \apo15}
+    {\bodytext{While working in the Human Integrated Vehicles and Environments (HIVE) Lab I assisted with internal telemetry systems and general networking systems throughout Johnson Space Center. These systems were needed for future Graphic User Interfaces (GUIs) used while training astronauts.}}
+}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\href{https://web.archive.org/web/20160415174833/http://glass.music.uga.edu:80/}{Hodgson Glass Research Lab}}
+  {\textsc{Athens, GA}} {%
+  \headedsubsection
+    {Undergraduate Researcher}
+    {August \apo14 -- April \apo15}
+    {\bodytext{Generally, I technically assisted Dr. Johnson Turner with technical advice and programmed/designed environments for digital music systems.}}
+   \headedsubsection
+    {Google Glass Development}
+    {August \apo14 -- April \apo15}
+    {\bodytext{I helped develop the first \href{https://github.com/piepieninja/gdkscoreviewer}{musical score viewing application} for Google Glass. This application was used in concert across multiple Google Glass units.}}
+  \headedsubsection
+    {Smart Podium Development}
+    {August \apo14 -- April \apo15}
+    {\bodytext{I developed a digital smart podium for the use of a band director. The goal was to allow synchronized music editing and notation.}}
+}
+
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\href{}{The Home Depot Innovation Center}}
+  {\textsc{Atlanta, GA}} {%
+  \headedsubsection
+    {Research \& Development Intern}
+    {April \apo14 -- August \apo14}
+    {\bodytext{I worked as a software developer intern at The Home Depot's Innovation Center. I was part of the Center's first group of interns and helped to justify its existence within the company.}}
+  \headedsubsection
+    {Google Glass Research \& Development}
+    {April \apo14 -- August \apo14}
+    {\bodytext{I developed an Augmented Reality Google Glass application using a low level OpenCV libraries and data structures. The goal was to assist with product recognition, allow for barcode scanning, and quick product searches.}}
+  \headedsubsection
+    {Virtual Reality Research \& Development}
+    {April \apo14 -- August \apo14}
+    {\bodytext{I developed a Virtual Reality application with Google Cardboard using low level OpenCV libraries and data structures. The goal was to display heat maps of various product data over store shelves to assist with product placement.}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\spacedhrule{0.5em}{-0.4em}
+\roottitle{Research}
+\vspace{-0.2em}
+
+\headedsection
+  {\href{http://smallsat.uga.edu/assets/docs/presentations/Feasability_of_Structure_from_motion_over_planetary_bodies_using_small_satellites.pdf}{The Feasibility of Structure from Motion over Planetary Bodies with Small Satellites}}{%
+  \headedsubsection
+    {The AIAA/Utah State Small Satellite Conference - Small Sat}
+    {Logan UT, 2017}
+    {\bodytext{Caleb Adams, Nicholas (Hollis) Neel, David Cotten}}
+}
+
+\headedsection
+  {\href{http://smallsat.uga.edu/assets/docs/posters/Structure_from_Motion_from_a_Constrained_Orbit.pdf}{Structure from Motion from a Constrained Orbiting Platform}}{%
+  \headedsubsection
+    {NASA/CASIS ISS Research and Development Conference}
+    {Washington D.C., 2017}
+    {\bodytext{Caleb Adams, Nicholas (Hollis) Neel}}
+}
+
+\headedsection
+  {\href{http://smallsat.uga.edu/assets/docs/presentations/UGAWorkshop2017CubeSatDeveloper.pdf}{(SP)ectral (O)cean (C)olor Satellite}}{%
+  \headedsubsection
+    {Cubesat Developers Conference - Cal Poly}
+    {San Luis Obispo CA, 2017}
+    {\bodytext{Caleb Adams, David Cotten, Deepak Mishra, Nicholas (Hollis) Neel, Graham Grable, Khoa Ngo}}
+}
+
+\headedsection
+  {\href{http://smallsat.uga.edu/assets/docs/posters/nirav_curo_poster.pdf}{Accuracy of Dense Point Clouds Given Varying Image Quality}}{%
+  \headedsubsection
+    {UGA CURO Symposium}
+    {Athens GA, 2017}
+    {\bodytext{Nirav Ilango, David Cotten, Caleb Adams, Nicholas (hollis) Neel, Margerite Madden, Deepak Mishra}}
+}
+
+\headedsection
+  {\href{http://smallsat.uga.edu/assets/docs/presentations/Space_SFM-2017_CURO_Syposium.pdf}{The Feasibility of Structure from Motion over Planetary Bodies with Small Satellite Systems}}{%
+  \headedsubsection
+    {UGA CURO Symposium}
+    {Athens GA, 2017}
+    {\bodytext{Caleb Adams}}
+}
+
+\headedsection
+  {\href{http://smallsat.uga.edu/assets/docs/posters/2017-ASPRS-IGTF-1-STEMopprotunities.pdf}{STEM Opportunities for Undergraduates Building Nanosatellites: the NASA CubeSat Program Georgia}}{%
+  \headedsubsection
+    {IGTF/ASPRS}
+    {Baltamore MD, 2017}
+    {\bodytext{D. Cotten, C. Adams, D. Mishra, M. Madden, S. Bernardes, K. Ngo, N. Neel, N. Ilango, M. Le Corre, G. Grable, A. King}}
+}
+
+\headedsection
+  {\href{http://smallsat.uga.edu/assets/docs/posters/2017-ASPRS-IGTF-2-PayloadDevelopment.pdf}{Building a Small Satellite Research Program at the University of Georgia: UGA Payload Development for CubeSats}}{%
+  \headedsubsection
+    {IGTF/ASPRS}
+    {Baltamore MD, 2017}
+    {\bodytext{D. Cotten, C. Adams, D. Mishra, M. Madden, S. Bernardes, K. Ngo, N. Neel, N. Ilango, M. Le Corre, G. Grable, A. King}}
+}
+
+\headedsection
+  {\href{http://smallsat.uga.edu/assets/docs/posters/AGU2016-SPOC-final2.pdf}{The SPectral Ocean Color (SPOC) Small Satellite Mission: From Payload to Ground Station Development and Everything in Between}}{%
+  \headedsubsection
+    {AGU}
+    {San Francisco CA, 2016}
+    {\bodytext{David L. Cotten, Sergio Bernardes, Deepak Mishra, Caleb Adams, Hollis Neel, Khoa Ngo, Megan LeCorre, Paige Copenhaver, Nirav Ilango, Adam King, Graham Grable, Paul Hwang}}
+}
+
+\headedsection
+  {\href{http://smallsat.uga.edu/assets/docs/posters/AGU2016-SSRL-final3.pdf}{Enhancing STEM Education through CubeSats: Using Satellite Integration as a Teaching Tool at a Non-Tech School}}{%
+  \headedsubsection
+    {AGU}
+    {San Francisco CA, 2016}
+    {\bodytext{David L. Cotten, Sergio Bernardes, Deepak Mishra, Caleb Adams, Hollis Neel, Khoa Ngo, Megan LeCorre, Paige Copenhaver, Nirav Ilango, Adam King, Graham Grable, Paul Hwang}}
+}
+
+\headedsection
+  {\href{http://smallsat.uga.edu/assets/docs/SymposiumPoster.pdf}{Feasibility of Structure from Motion over Planetary Bodies using Small Satellites}}{%
+  \headedsubsection
+    {Georgia Scientific Computing Symposium}
+    {Athens GA, 2016}
+    {\bodytext{Caleb Adams, David L. Cotten, Nicholas (Hollis) Neel, Kyle Hamilton, Jacob Conley, Deepak Mishra}}
+}
+
+\begin{center}
+  \emph{\small Please visit my \href{http://calebdevelops.com}{website}, or click the links above, for more details on my research}
+\end{center}
+
+
+\spacedhrule{0.5em}{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\roottitle{Grants Funded}
+\vspace{-0.2em}
+
+\headedsection
+  {{UNP NS-9, Phase B}}
+  %{\textsc{Athens, GA}}
+  {%
+  \headedsubsection
+    {University Nanosatellite Program, Nano-Sat 9 Phase B-- \$600,000}
+    {2018}
+    {\bodytext{The Air Force Research Lab's Nano Satellite Program funded the UGA SSRL, as the winner of phase A, \$600,000 to build and operate the MOCI satellite.}}
+}
+
+\headedsection
+  {{NASA USIP}}
+  %{\textsc{Athens, GA}}
+  {%
+  \headedsubsection
+    {The NASA Undergraduate Student Instrument Project -- \$200,000}
+    {2016}
+    {\bodytext{The NASA Undergraduate Student Instrument Project funded the UGA SSRL  \$200,000 for the design, construction, and launch of the SPOC satellite. }}
+}
+
+\headedsection
+  {{UNP NS-9, Phase A}}
+  %{\textsc{Athens, GA}}
+  {%
+  \headedsubsection
+    {University Nanosatellite Program, Nano-Sat 9 Phase A -- \$180,000}
+    {2016}
+    {\bodytext{The Air Force Research Lab's Nano Satellite Program funded the UGA SSRL for \$180,000 to design and prove the mission architecture for the MOCI satellite.}}
+}
+
+\begin{center}
+  \emph{\small Grants listed about have me listed as an \textbf{author} and significant contributor.}
+\end{center}
+
+\spacedhrule{0.5em}{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\roottitle{Awards \& Honors}
+\vspace{-0.2em}
+
+\headedsection
+  {{UNP Phase B}}
+  %{\textsc{Athens, GA}}
+  {%
+  \headedsubsection
+    {Phase A Winner}
+    {2018}
+    {\bodytext{The MOCI satellite was selected as the winner of the 9th iteration of the University Nanosatellite Program, selected first out of 10 competing programs, and awarded over \$600,000 dollars in phase B funding.}}
+}
+
+\headedsection
+  {{TEDx UGA}}
+  %{\textsc{Athens, GA}}
+  {%
+  \headedsubsection
+    {TEDx UGA Student Idea Showcase}
+    {2016}
+    {\bodytext{I was selected as a presenter at TEDx UGA's student idea showcase. I spoke about the importance of space exploration, citizen science, and the democratization of space with small satellites.}}
+}
+
+\headedsection
+  {{HackGT}}
+  %{\textsc{Athens, GA}}
+  {%
+  \headedsubsection
+    {Top 8}
+    {2016}
+    {\bodytext{I lead a team that won top 8 at Georgia Tech's Major League Hacking (MLH) Hackathon. We build a drone from scratch that planted seeds. We were selected amoung 500 of our peers.}}
+}
+
+\headedsection
+  {{NASA Johnson EV3}}
+  %{\textsc{Athens, GA}}
+  {%
+  \headedsubsection
+    {Team Excellence}
+    {2015}
+    {\bodytext{While working at NASA's Johnson Space Center I was awarded for going above and beyond requirements by staying late nights, and over night, to perform thermal vacuums tests on a payload.}}
+}
+
+\headedsection
+  {{VT Hacks}}
+  %{\textsc{Athens, GA}}
+  {%
+  \headedsubsection
+    {Winner}
+    {2015}
+    {\bodytext{I lead a team that won Virginia Tech's 2015 Major League Hacking (MLH) Hackathon. We built a remote operated telescope and competed with 1000 of our peers.}}
+}
+
+
+\spacedhrule{0.5em}{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\roottitle{Leadership Experience}
+\vspace{-0.2em}
+
+\headedsection
+  {{UGA Small Satellite Research Laboratory}}
+  {\textsc{Athens, GA}} {%
+  \headedsubsection
+    {Founder, Program Manager}
+    {2016 -- Present}
+    {\bodytext{With two of my friends, I created the foundations of the UGA SSRL. I have sense lead it to receive almost a million dollars in funding as it constructs Georgia's first satellites.}}
+}
+
+\headedsection
+  {{UGA Hacks}}
+  {\textsc{Athens, GA}} {%
+  \headedsubsection
+    {Co-Founder}
+    {2015 -- 2016}
+    {\bodytext{With two of my friends, I helped to create UGA's offical Major League Hacking (MLH) Hackathon program, which still exists today.}}
+}
+
+\headedsection
+  {{UGA Redcoat Band}}
+  {\textsc{Athens, GA}} {%
+  \headedsubsection
+    {Section Leader}
+    {2014 -- 2015}
+    {\bodytext{I lead the UGA Redcoat Band's trombone section. I helped organize events, conduit rehearsals, and teach music.}}
+}
+
+\spacedhrule{0.5em}{-0.4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
