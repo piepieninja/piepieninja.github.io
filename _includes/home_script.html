@@ -56,6 +56,36 @@
 
     window.addEventListener( 'resize', onWindowResize, false );
 
+    // model
+
+    var onProgress = function ( xhr ) {
+      if ( xhr.lengthComputable ) {
+        var percentComplete = xhr.loaded / xhr.total * 100;
+        console.log( Math.round(percentComplete, 2) + '% downloaded' );
+      }
+    };
+
+    var onError = function ( xhr ) { };
+
+    THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
+
+    var mtlLoader = new THREE.MTLLoader();
+      mtlLoader.setPath( 'obj/' );
+      mtlLoader.load( 'carl.mtl', function( materials ) {
+
+        materials.preload();
+
+        var objLoader = new THREE.OBJLoader();
+        objLoader.setMaterials( materials );
+        objLoader.setPath( 'obj/' );
+        objLoader.load( 'carl.obj', function ( carl_boi ) {
+
+          //scene.add( carl_boi );
+
+        }, onProgress, onError );
+
+      });
+
   }
 
   function onWindowResize() {
@@ -115,6 +145,7 @@
 
       }
 
+      // make the new random geometry
       geometry = new THREE.SphereBufferGeometry( 50, Math.random() * 64, Math.random() * 32 );
       texture = new THREE.CanvasTexture( createImage() );
       material = new THREE.MeshBasicMaterial( { map: texture, wireframe: true } );
@@ -131,6 +162,10 @@
     }
 
     renderer.render( scene, camera );
+
+    mesh.rotation.x += r_r_x;
+    mesh.rotation.y += r_r_y;
+    mesh.rotation.z += r_r_z;
 
     mesh.rotation.x += r_r_x;
     mesh.rotation.y += r_r_y;
