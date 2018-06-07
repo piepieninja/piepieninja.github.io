@@ -16,11 +16,15 @@ nav, .navbar-fixed-top, .navbar-default, .navbar, .navbar-toggle {
 }
 
 img {
+  /*width: 250px;*/
+}
+
+.img-research {
   width: 250px;
 }
 
 small {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 canvas {
@@ -37,7 +41,7 @@ p, a, li, ul, h1, h2, h3, h4, h5 {
 
 p, ul {
   color: black;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .navbar-brand {
@@ -45,7 +49,7 @@ p, ul {
 }
 
 .p-link {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .navbar-brand, .p-link {
