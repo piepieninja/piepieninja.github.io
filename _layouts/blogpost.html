@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+	<body>
+    {% include header.html %}
+
+    <div class="content-holder">
+      <div class="content-pad">
+        <h2>{{ post.title }}</h2>
+        {{ content }}
+      </div>
+    </div>
+
+    {% include page_script.html %}
+
+	</body>
+</html>
