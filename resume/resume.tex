@@ -7,6 +7,11 @@
 % Start a document with the here given default font size and paper size.
 \documentclass[10pt,a4paper]{article}
 
+\usepackage{fancyhdr}
+\fancyhf{}
+\cfoot{\thepage}
+
+
 % \usepackage[dvipsnames]{xcolor}
 \usepackage{pdfpages}
 
@@ -25,7 +30,7 @@
 \definecolor{bluegreen}{RGB}{20,84,120} % dark blue {48,84,120}
 
 % \newfontfamily{\FA}{FontAwesome Regular}
-
+\pagestyle{fancy}
 \begin{document}  % begin the content of the document
 \sloppy  % this to relax whitespacing in favour of straight margins
 
