@@ -20,10 +20,11 @@
 % Makes resume-specific commands available.
 \usepackage{resume}
 
+\usepackage{fontawesome}
 
-\definecolor{bluegreen}{RGB}{110,36,36}
+\definecolor{bluegreen}{RGB}{20,84,120} % dark blue {48,84,120}
 
-
+% \newfontfamily{\FA}{FontAwesome Regular}
 
 \begin{document}  % begin the content of the document
 \sloppy  % this to relax whitespacing in favour of straight margins
@@ -92,7 +93,7 @@
   \headedsubsection
     {SPOC}
     {January \apo16 -- present}
-    {\bodytext{The Spectral Ocean Color (SPOC) satellite is a 3U cube satellite funded by NASA's Undergraduate Student Instrument Project (USIP) and was selected for NASA's Cube Satellite Launch Initiative (CSLI) for a handoff in Q4 of 2019. The SPOC satellite shall use a custom hyperspectrial sensor to analyze the coastal ecosystems of the Georgia coast.}}
+    {\bodytext{The Spectral Ocean Color (SPOC) satellite is a 3U cube satellite funded by NASA's Undergraduate Student Instrument Project (USIP) and was selected for NASA's Cube Satellite Launch Initiative (CSLI) for a handoff in Q4 of 2019. The SPOC satellite shall use a custom hyperspectral sensor to analyze the coastal ecosystems of the Georgia coast.}}
 }
 
 \headedsection  % sets the header for a subsection and contains usually body text
@@ -149,25 +150,30 @@
 \spacedhrule{0.5em}{-0.4em}
 \roottitle{Research}
 \vspace{-0.2em}
-
+~\\
+\centerline{
+Journal Paper: {\color{bluegreen} \faFileTextO} ; \hspace{2mm} Conference Paper: {\color{bluegreen} \faStickyNoteO} ; \hspace{2mm}
+Conference Presentation: {\color{bluegreen} \faTelevision} ; \hspace{2mm} Conference Poster: {\color{bluegreen} \faMapO}
+}
+\\
 \headedsection
-  {\textbf{\color{bluegreen} Conference Paper:} \href{http://smallsat.uga.edu/images/documents/papers/Adams_GPU_Paper.pdf}{Towards an Integrated GPU Accelerated SoC as a Flight Computer for Small Satellites}}{%
+  {{\color{bluegreen} \faStickyNoteO} \href{http://smallsat.uga.edu/images/documents/papers/Adams_GPU_Paper.pdf}{Towards an Integrated GPU Accelerated SoC as a Flight Computer for Small Satellites}}{%
   \headedsubsection
     {IEEE Aerospace Conference}
     {Big Sky MT, 2019}
-    {\bodytext{Caleb Adams, Allen Spain, Jackson Parker, Mattew Hevert, James Roach, David Cotten}}
+    {\bodytext{Caleb Adams, Allen Spain, Jackson Parker, Matthew Hevert, James Roach, David Cotten}}
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Presentation:} \href{http://smallsat.uga.edu/images/documents/presentations/IEEE_Aerospace_GPU_Presentation.pdf}{Towards an Integrated GPU Accelerated SoC as a Flight Computer for Small Satellites}}{%
+  {{\color{bluegreen} \faTelevision} \href{http://smallsat.uga.edu/images/documents/presentations/IEEE_Aerospace_GPU_Presentation.pdf}{Towards an Integrated GPU Accelerated SoC as a Flight Computer for Small Satellites}}{%
   \headedsubsection
     {IEEE Aerospace Conference}
     {Big Sky MT, 2019}
-    {\bodytext{Caleb Adams, Allen Spain, Jackson Parker, Mattew Hevert, James Roach, David Cotten}}
+    {\bodytext{Caleb Adams, Allen Spain, Jackson Parker, Matthew Hevert, James Roach, David Cotten}}
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Presentation:} \href{http://smallsat.uga.edu/images/documents/presentations/MOCI_Software_Demo2018.pdf}{Selected Software Demonstrations from the Multiview Onboard Computational Imager Satellite}}{%
+  {{\color{bluegreen} \faTelevision} \href{http://smallsat.uga.edu/images/documents/presentations/MOCI_Software_Demo2018.pdf}{Selected Software Demonstrations from the Multiview Onboard Computational Imager Satellite}}{%
   \headedsubsection
     {Space Innovations Symposium}
     {Atlanta GA, 2018}
@@ -175,7 +181,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Poster:} \href{http://smallsat.uga.edu/images/documents/posters/GPU_SmallSatposter.pdf}{GPU Accelerated SoCs as Flight Computers for Small Satellites}}{%
+  {{\color{bluegreen} \faMapO} \href{http://smallsat.uga.edu/images/documents/posters/GPU_SmallSatposter.pdf}{GPU Accelerated SoCs as Flight Computers for Small Satellites}}{%
   \headedsubsection
     {Space Innovations Symposium}
     {Atlanta GA, 2018}
@@ -183,7 +189,15 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Paper:} \href{http://smallsat.uga.edu/images/documents/papers/Adams_32nd_SmallSatConference.pdf}{A Near Real Time Space Based Computer Vision System for Accurate Terrain Mapping}}{%
+  {{\color{bluegreen} \faTelevision} \href{http://smallsat.uga.edu/}{What are Cubesats? A look at UGA Space Exploration}}{%
+  \headedsubsection
+    {UGA Physics and Astronomy Colloquium - Invited Speaker}
+    {Athens GA, 2018}
+    {\bodytext{Caleb Adams, Katie Summey, Nicholas Heavner}}
+}
+
+\headedsection
+  {{\color{bluegreen} \faStickyNoteO} \href{http://smallsat.uga.edu/images/documents/papers/Adams_32nd_SmallSatConference.pdf}{A Near Real Time Space Based Computer Vision System for Accurate Terrain Mapping}}{%
   \headedsubsection
     {The AIAA/Utah State Small Satellite Conference - Small Sat}
     {Logan UT, 2018}
@@ -191,7 +205,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Presentation:} \href{http://smallsat.uga.edu/images/documents/presentations/Adams,Caleb_Presentation.pdf}{Batch Analytical Comparisons of on Orbit Multiview Stereo}}{%
+  {{\color{bluegreen} \faTelevision} \href{http://smallsat.uga.edu/images/documents/presentations/Adams,Caleb_Presentation.pdf}{Batch Analytical Comparisons of on Orbit Multiview Stereo}}{%
   \headedsubsection
     {Space Innovations Symposium}
     {Atlanta GA, 2017}
@@ -199,7 +213,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Poster:} \href{http://smallsat.uga.edu/images/documents/posters/Feature_Matching_from_Orbiting_Vehicles.pdf}{Feature Matching from Orbiting Vehicles}}{%
+  {{\color{bluegreen} \faMapO} \href{http://smallsat.uga.edu/images/documents/posters/Feature_Matching_from_Orbiting_Vehicles.pdf}{Feature Matching from Orbiting Vehicles}}{%
   \headedsubsection
     {Space Innovations Symposium}
     {Atlanta GA, 2017}
@@ -207,7 +221,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Poster:} \href{http://smallsat.uga.edu/images/documents/posters/Symposium_for_Space_Innovations_Poster.pdf}{Concept of Operations in Small Satellite Functionality}}{%
+  {{\color{bluegreen} \faMapO} \href{http://smallsat.uga.edu/images/documents/posters/Symposium_for_Space_Innovations_Poster.pdf}{Concept of Operations in Small Satellite Functionality}}{%
   \headedsubsection
     {Space Innovations Symposium}
     {Atlanta GA, 2017}
@@ -215,7 +229,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Presentation:} \href{http://smallsat.uga.edu/images/documents/presentations/Feasability_of_Structure_from_motion_over_planetary_bodies_using_small_satellites.pdf}{The Feasibility of Structure from Motion over Planetary Bodies with Small Satellites}}{%
+  {{\color{bluegreen} \faTelevision} \href{http://smallsat.uga.edu/images/documents/presentations/Feasability_of_Structure_from_motion_over_planetary_bodies_using_small_satellites.pdf}{The Feasibility of Structure from Motion over Planetary Bodies with Small Satellites}}{%
   \headedsubsection
     {The AIAA/Utah State Small Satellite Conference - Small Sat}
     {Logan UT, 2017}
@@ -223,7 +237,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Poster:} \href{http://smallsat.uga.edu/images/documents/posters/Structure_from_Motion_from_a_Constrained_Orbit.pdf}{Structure from Motion from a Constrained Orbiting Platform}}{%
+  {{\color{bluegreen} \faMapO} \href{http://smallsat.uga.edu/images/documents/posters/Structure_from_Motion_from_a_Constrained_Orbit.pdf}{Structure from Motion from a Constrained Orbiting Platform}}{%
   \headedsubsection
     {NASA/CASIS ISS Research and Development Conference}
     {Washington D.C., 2017}
@@ -231,7 +245,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Presentation:} \href{http://smallsat.uga.edu/images/documents/presentations/UGAWorkshop2017CubeSatDeveloper.pdf}{(SP)ectral (O)cean (C)olor Satellite}}{%
+  {{\color{bluegreen} \faTelevision} \href{http://smallsat.uga.edu/images/documents/presentations/UGAWorkshop2017CubeSatDeveloper.pdf}{(SP)ectral (O)cean (C)olor Satellite}}{%
   \headedsubsection
     {Cubesat Developers Conference - Cal Poly}
     {San Luis Obispo CA, 2017}
@@ -239,7 +253,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Poster:} \href{http://smallsat.uga.edu/images/documents/posters/nirav_curo_poster.pdf}{Accuracy of Dense Point Clouds Given Varying Image Quality}}{%
+  {{\color{bluegreen} \faMapO} \href{http://smallsat.uga.edu/images/documents/posters/nirav_curo_poster.pdf}{Accuracy of Dense Point Clouds Given Varying Image Quality}}{%
   \headedsubsection
     {UGA CURO Symposium}
     {Athens GA, 2017}
@@ -247,7 +261,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Presentation:} \href{http://smallsat.uga.edu/images/documents/presentations/Space_SFM-2017_CURO_Syposium.pdf}{The Feasibility of Structure from Motion over Planetary Bodies with Small Satellite Systems}}{%
+  {{\color{bluegreen} \faTelevision} \href{http://smallsat.uga.edu/images/documents/presentations/Space_SFM-2017_CURO_Syposium.pdf}{The Feasibility of Structure from Motion over Planetary Bodies with Small Satellite Systems}}{%
   \headedsubsection
     {UGA CURO Symposium}
     {Athens GA, 2017}
@@ -255,7 +269,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Presentation:} \href{http://smallsat.uga.edu/images/documents/posters/2017-ASPRS-IGTF-1-STEMopprotunities.pdf}{STEM Opportunities for Undergraduates Building Nanosatellites: the NASA CubeSat Program Georgia}}{%
+  {{\color{bluegreen} \faTelevision} \href{http://smallsat.uga.edu/images/documents/posters/2017-ASPRS-IGTF-1-STEMopprotunities.pdf}{STEM Opportunities for Undergraduates Building Nanosatellites: the NASA CubeSat Program Georgia}}{%
   \headedsubsection
     {IGTF/ASPRS}
     {Baltamore MD, 2017}
@@ -263,7 +277,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Presentation:} \href{http://smallsat.uga.edu/images/documents/posters/2017-ASPRS-IGTF-2-PayloadDevelopment.pdf}{Building a Small Satellite Research Program at the University of Georgia: UGA Payload Development for CubeSats}}{%
+  {{\color{bluegreen} \faTelevision} \href{http://smallsat.uga.edu/images/documents/posters/2017-ASPRS-IGTF-2-PayloadDevelopment.pdf}{Building a Small Satellite Research Program at the University of Georgia: UGA Payload Development for CubeSats}}{%
   \headedsubsection
     {IGTF/ASPRS}
     {Baltamore MD, 2017}
@@ -271,7 +285,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Poster:} \href{http://smallsat.uga.edu/images/documents/posters/AGU2016-SPOC-final2.pdf}{The SPectral Ocean Color (SPOC) Small Satellite Mission: From Payload to Ground Station Development and Everything in Between}}{%
+  {{\color{bluegreen} \faMapO} \href{http://smallsat.uga.edu/images/documents/posters/AGU2016-SPOC-final2.pdf}{The SPectral Ocean Color (SPOC) Small Satellite Mission: From Payload to Ground Station Development and Everything in Between}}{%
   \headedsubsection
     {AGU}
     {San Francisco CA, 2016}
@@ -279,7 +293,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Poster:} \href{http://smallsat.uga.edu/images/documents/posters/AGU2016-SSRL-final3.pdf}{Enhancing STEM Education through CubeSats: Using Satellite Integration as a Teaching Tool at a Non-Tech School}}{%
+  {{\color{bluegreen} \faMapO} \href{http://smallsat.uga.edu/images/documents/posters/AGU2016-SSRL-final3.pdf}{Enhancing STEM Education through CubeSats: Using Satellite Integration as a Teaching Tool at a Non-Tech School}}{%
   \headedsubsection
     {AGU}
     {San Francisco CA, 2016}
@@ -287,7 +301,7 @@
 }
 
 \headedsection
-  {\textbf{\color{bluegreen} Conference Poster:} \href{http://smallsat.uga.edu/images/documents/posters/2017-GeorgiaScientificComputingSymposium\%20final.pdf}{Feasibility of Structure from Motion over Planetary Bodies using Small Satellites}}{%
+  {{\color{bluegreen} \faMapO} \href{http://smallsat.uga.edu/images/documents/posters/2017-GeorgiaScientificComputingSymposium\%20final.pdf}{Feasibility of Structure from Motion over Planetary Bodies using Small Satellites}}{%
   \headedsubsection
     {Georgia Scientific Computing Symposium}
     {Athens GA, 2016}
@@ -394,7 +408,7 @@
   \headedsubsection
     {Top 8}
     {2016}
-    {\bodytext{I led a team that won top 8 at Georgia Tech's Major League Hacking (MLH) Hackathon. We built a drone from scratch that planted seeds. We were selected amoung 500 of our peers.}}
+    {\bodytext{I led a team that won top 8 at Georgia Tech's Major League Hacking (MLH) Hackathon. We built a drone from scratch that planted seeds. We were selected among 500 of our peers.}}
 }
 
 \headedsection
@@ -442,7 +456,7 @@
     {Head TA}
     {2018 -- Present}
     {\bodytext{The CS 1302 class at UGA is when most Computer Science students first experience significant programming. It takes them from simple terminal applications to complex GUI-based applications with large codebases.
-    I manage a team of about 10 other TAs (varies by semester) who help run this class of 300+ students. I manage grading criteria, ruberics, coding projects, auto-grading systems, and hold office hours to help students understand the subject.}}
+    I manage a team of about 10 other TAs (varies by semester) who help run this class of 300+ students. I manage grading criteria, rubrics, coding projects, auto-grading systems, and hold office hours to help students understand the subject.}}
 }
 
 \headedsection
@@ -451,9 +465,9 @@
   \headedsubsection
     {Co-Founder}
     {2015 -- 2016}
-    {\bodytext{With two of my friends, I helped to create UGA's offical Major League Hacking
+    {\bodytext{With two of my friends, I helped to create UGA's official Major League Hacking
     (MLH) Hackathon program, which still exists today. The organization helps get Computer Science students
-    excited about programming by presenting them with difficult, relevent challenges.}}
+    excited about programming by presenting them with difficult, relevant challenges.}}
 }
 
 \headedsection
