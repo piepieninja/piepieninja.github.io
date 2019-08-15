@@ -16,6 +16,8 @@ python program with a GUI. The program shows an image slowing experiencing bitfl
 original image is indistinguishable. This is, of course, hyperbole and bitflips do not occur
 this quikly - I found it to be a useful teaching tool.
 
+<br>
+
 Fundamentally, TMR is exactly what it says it is. There are 3 copies of something and you can check values at particular locations to make sure all copies are still equal. If you notice that the copies are not equal, i.e. one copy is `0` and the other two are `1`, then you can choose to correct the copy that is the outlier. As a logic circuite this looks like:
 
 ![Majority_Logic](/img/blog/Majority_Logic.png)
