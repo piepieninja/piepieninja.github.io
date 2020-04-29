@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-	<body>
+    <body>
     {% include header.html %}
 
     <div class="content-holder">
@@ -13,15 +13,48 @@
       <br>
       <p>
         I am, in some capacity, involved in all the research that occurs at the <a href="http://smallsat.uga.edu" target="_blank">UGA Small Satellite Research Laboratory</a>.
-        The research listed below is research that was either/or an Author, Coauthor, or Significant Contributer:
+        The research listed below is research that was either/or an Author, Coauthor, or Significant Contributor:
         <br>
         <br>
         <b>KEY:</b><br>
+        [T] = Thesis<br>
         [r] = research paper/abstract<br>
         [p] = poster<br>
         [s] = slideshow/keynote<br>
         [$] = funding!<br>
         <br>
+
+        <ul>
+          <li>
+            -- 2020 --
+            <ul>
+              <li>
+                [T] <b>Master's Thesis (Pre-Release)</b>, Athens GA<br>
+                <a href="/research-papers/thesis-pre-release.pdf" target="_blank">High Performance Computation with Small Satellites and Small Satellite Swarms for 3D Reconstruction</a>
+                <br>
+                In this thesis research I discuss the design and implementation of 2 Earth observation Cube Satellites with a focus on the computational methods used and the design of their computer systems. The satellite computer systems are tested by simulating imaging of single view observations and multiview observations. Observations are simulated by imaging existing 3D models of the Earth's surface in 3D rendering software. A custom computer vision library, known as SSRLCV, is used to compute the final 3D models which are then compared to the ground truth. Restrictions, unique to the space environment, are mitigated with a specialized operating system, hardware, and software. Tests are run on the Nvidia TX2 and TX2i with timing, state, and power usage tracking. The Nvidia TX2i GPU accelerated SoC is modified for use in a Cube Satellite and is used as the platform for high performance onboard computation. The results show accurate 3D reconstruction of the surface of Earth feasible within 15 to 100 meters, depending on the camera system and altitude, while maintaining favorable power usage and computation time.
+                <br>
+                <i><u>Caleb Adams</u></i>, Comittee:
+                <br>
+                <img class="img-research" src="{{base}}/img/MOCI-6U.png"></img>
+                <img class="img-research" src="{{base}}/img/moci-open.png"></img>
+                <br>
+                <small>[left] The MOCI (Multiview Onboard Computational Imager) rendered. [right] The internals of the MOCI satellite, which include a 6.6 meter GSD (from 400km) optical system and a modified Nvidia TX2i GPU SoC.</small>
+                <br>
+                <br>
+                <img class="img-research" src="{{base}}/img/everestGrounTruthCompare.png"></img>
+                <img class="img-research" src="{{base}}/img/everestGrounTruthCompareVSFM.png"></img>
+                <br>
+                <small>[left] A 3D reconstruction generated using <a href="https://github.com/uga-ssrl/SSRLCV" target="_blank">SSRLCV</a> with an average accuracy of ~47 meters to the ground truth. [right] A 3D reconstruction generated using VSFM with can average accuracy of ~142 meters to the ground truth.</small>
+                <br>
+                <br>
+                <img class="img-research" src="{{base}}/img/pipeline.png"></img>
+                <br>
+                <small>The recommended SSRLCV pipeline for the MOCI mission. Checkpointing should be possible at any stage or intermediate stage.<small>
+              </li>
+            </ul>
+          </li>
+        </ul>
 
         <ul>
           <li>
@@ -38,7 +71,7 @@
               <li>
                 [r] <b>The IEEE Aerospace Conference</b>, Big Sky MT<br>
                 <a href="http://smallsat.uga.edu/images/documents/papers/Adams_GPU_Paper.pdf" target="_blank">Towards an Integrated GPU Accelerated SoC as a Flight Computer for Small Satellites</a>
-                Integration of a Nvidia TX2i module onto a PC104+ complient stack for small satellites, additional periferals (such as the SmartFusion2 SoC) were added.<br>
+                Integration of a Nvidia TX2i module onto a PC104+ compliant stack for small satellites, additional peripherals (such as the SmartFusion2 SoC) were added.<br>
                 <i><u>Caleb Adams</u>, Allen Spain, Jackson Parker, Mattew Hevert, James Roach, David Cotten</i>
                 <br>
                 <img class="img-research" src="{{base}}/img/afc_system.png"></img>
@@ -51,7 +84,7 @@
               <li>
                 [s] <b>The IEEE Aerospace Conference</b>, Big Sky MT<br>
                 <a href="http://smallsat.uga.edu/images/documents/presentations/IEEE_Aerospace_GPU_Presentation.pdf" target="_blank">Towards an Integrated GPU Accelerated SoC as a Flight Computer for Small Satellites</a>
-                The presentaion of the previously noted paper.<br>
+                The presentation of the previously noted paper.<br>
                 <i><u>Caleb Adams</u>, Allen Spain, Jackson Parker, Mattew Hevert, James Roach, David Cotten</i>
                 <br>
                 <img class="img-research" src="{{base}}/img/block_level_tmr.png"></img>
@@ -87,7 +120,7 @@
               <li>
                 [r] <b>The AIAA/Utah State Small Satellite Conference - SmallSat</b>, Logan UT<br>
                 <a href="/research-papers/adamssmallsat2018.pdf" target="_blank">A Near Real Time Space Based Computer Vision System for Accurate Terrain Mapping</a>
-                A mathematical overview of the MOCI satelite's gpu accelerated computer vision system<br>
+                A mathematical overview of the MOCI satellite's gpu accelerated computer vision system<br>
                 <i><u>Caleb Adams</u></i>
               </li>
               <li>
@@ -111,7 +144,7 @@
                 <br>
                 <img class="img-research" src="{{base}}/img/lenne.png"></img><br>
                 <small>
-                  An example dense pointcloud reconstruction of <a href="https://en.wikipedia.org/wiki/Linn%C3%A9_(crater)" target="_blank">linne Crater</a> on the moon.
+                  An example dense point cloud reconstruction of <a href="https://en.wikipedia.org/wiki/Linn%C3%A9_(crater)" target="_blank">linne Crater</a> on the moon.
                 This was a pretty good reconstruction, simulated from a satellite orbiting ~150km above the lunar surface. The simulated optical payload was the same as MOCI's.
                 </small>
                 <br>
@@ -138,7 +171,7 @@
               <li>
                 [s] <b>Cubesat Developers Conference - Cal Poly</b>, San Luis Obispo CA <br>
                 <a href="http://smallsat.uga.edu/images/documents/presentations/UGAWorkshop2017CubeSatDeveloper.pdf" target="_blank">(SP)ectral (O)cean (C)olor Satellite</a>
-                An initial discription of the Hyperspectral capabilities of the SPOC satellite. <br>
+                An initial description of the Hyperspectral capabilities of the SPOC satellite. <br>
                 <i><u>Caleb Adams</u>, David Cotten, Deepak Mishra, Nicholas (Hollis) Neel, Graham Grable, Khoa Ngo</i>
                 <br>
                 <img class="img-research" src="{{base}}/img/spoc-lens.png"></img>
@@ -153,7 +186,7 @@
                 [p] <b>UGA CURO Symposium</b>, Athens GA <br>
                 <a href="http://smallsat.uga.edu/images/documents/posters/nirav_curo_poster.pdf" target="_blank">Accuracy of Dense Point Clouds Given Varying Image Quality</a>
                 An initial exploration of SfM from orbit using the MOCI satellite system. <br>
-                <i><u>Nirav Ilango</u>, David Cotten, Caleb Adams, Nicholas (hollis) Neel, Margerite Madden, Deepak Mishra</i>
+                <i><u>Nirav Ilango</u>, David Cotten, Caleb Adams, Nicholas (hollis) Neel, Marguerite Madden, Deepak Mishra</i>
               </li>
               <li>
                 [p] <b>UGA CURO Symposium</b>, Athens GA <br>
@@ -162,15 +195,15 @@
                 <i><u>Caleb Adams</u></i>
               </li>
               <li>
-                [s] <b>IGTF/ASPRS</b>, Baltamore MD <br>
+                [s] <b>IGTF/ASPRS</b>, Baltimore MD <br>
                 <a href="http://smallsat.uga.edu/images/documents/posters/2017-ASPRS-IGTF-1-STEMopprotunities.pdf" target="_blank">STEM Opportunities for Undergraduates Building Nanosatellites: the NASA CubeSat Program Georgia</a>
-                An overview of the programatic structure and opportunities at the UGA SSRL. <br>
+                An overview of the programmatic structure and opportunities at the UGA SSRL. <br>
                 <i>D. Cotten, <u>C. Adams</u>, D. Mishra, M. Madden, S. Bernardes, K. Ngo, N. Neel, N. Ilango, M. Le Corre, G. Grable, A. King </i>
               </li>
               <li>
-                [s] <b>IGTF/ASPRS</b>, Baltamore MD <br>
+                [s] <b>IGTF/ASPRS</b>, Baltimore MD <br>
                 <a href="http://smallsat.uga.edu/images/documents/posters/2017-ASPRS-IGTF-2-PayloadDevelopment.pdf" target="_blank">Building a Small Satellite Research Program at the University of Georgia: UGA Payload Development for CubeSats</a>
-                A discription of the UGA SSRL SPOC payload, with a focus on remote sensing applications. <br>
+                A description of the UGA SSRL SPOC payload, with a focus on remote sensing applications. <br>
                 <i>D. Cotten, <u>C. Adams</u>, D. Mishra, M. Madden, S. Bernardes, K. Ngo, N. Neel, N. Ilango, M. Le Corre, G. Grable, A. King </i>
               </li>
             </ul>
@@ -224,7 +257,7 @@
 
       <!-- <p>
         <br>
-        The research listed below is research that I helped advise/consult, but was not a primary contributer to:
+        The research listed below is research that I helped advise/consult, but was not a primary contributor to:
         <ul>
           <li>Section In Progress</li>
         </ul>
@@ -235,5 +268,5 @@
     {% include page_script.html %}
 
 
-	</body>
+    </body>
 </html>
