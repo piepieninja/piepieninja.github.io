@@ -2,4 +2,4 @@
 
 first bundle install: `bundle install`
 
-run with: `jekyll serve`
+run locally with: `bundle exec jekyll serve`
