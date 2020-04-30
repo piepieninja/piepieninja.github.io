@@ -48,6 +48,14 @@ code {
   font-size: 18px;
 }
 
+.bibtex {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important;
+  font-size: 10px;
+  color: #2F4F4F;
+  background-color: #F9F2F4;
+  border-radius: 8px;
+}
+
 .highlighter-rouge {
   font-size: 12px;
 }
