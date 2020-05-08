@@ -22,12 +22,12 @@ The swarm state managment is available here: <a href="https://github.com/piepien
 
 <p class="bibtex">
   @mastersthesis{CalebAdamsMSThesis, <br>
-    &emsp; author={Caleb Ashmore Adams}, <br>
-    &emsp; title={High Performance Computation with Small Satellites and Small Satellite Swarms for 3D Reconstruction}, <br>
-    &emsp; school={The University of Georgia}, <br>
-    &emsp; url={http://piepieninja.github.io/research-papers/thesis-pre-release.pdf},<br>
-    &emsp; year=2020, <br>
-    &emsp; month=may <br>
+    &nbsp; author={Caleb Ashmore Adams}, <br>
+    &nbsp; title={High Performance Computation with Small Satellites and Small Satellite Swarms for 3D Reconstruction}, <br>
+    &nbsp; school={The University of Georgia}, <br>
+    &nbsp; url={http://piepieninja.github.io/research-papers/thesis.pdf},<br>
+    &nbsp; year=2020, <br>
+    &nbsp; month=may <br>
   }
 </p>
 

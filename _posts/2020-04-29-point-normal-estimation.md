@@ -41,9 +41,9 @@ $$
 As previously mentioned, there are two viable normals that could be computed with this method, but only one normal is the desired normal. To solve this issue we could simply compute the vector from the camera position $$C$$ to point $$p_i$$ such that $$(C - p_i) \cdot n_i < 0$$ holds. If this does not hold then the vector can be flipped by changing the signs of its components. However, because there are likely to be many camera locations, say $$C = { C_{i,1} , C_{i,2} , C_{i,3}, ... , C_{i,N} }$$ for all $$N$$ cameras of a given point $$p_i$$, a point's normal can be considered ambiguous if the following is true:
 
 
- &emsp; &#8226; There exists a $$\bar{C_1} \in C$$ such that $$(\bar{C_1} - p_i) \cdot n_i < 0$$
+ &nbsp; &#8226; There exists a $$\bar{C_1} \in C$$ such that $$(\bar{C_1} - p_i) \cdot n_i < 0$$
 
- &emsp; &#8226; There exists a $$\bar{C_1} \in C$$ such that $$(\bar{C_1} - p_i) \cdot n_i > 0$$
+ &nbsp; &#8226; There exists a $$\bar{C_1} \in C$$ such that $$(\bar{C_1} - p_i) \cdot n_i > 0$$
 
 
 Such points cannot easily be oriented and thus additional computation is needed; fortunately, in most cases there are very few such normals. When these normals are discovered they are added to a queue of unfinished normals while the rest are placed in a list of correct normals. The algorithm iterates through the queue of ambiguous normals and tries to determine the orientation by looking at the neighboring points of $$p_i$$. If the neighboring points of $$p_i$$ have already finished normals, then $$n_i$$ is oriented such that it is consistent with the neighboring normals $$m_i$$ by setting $$n_i \cdot m_i > 0$$ . If the neighboring points do not have already finished normals, then we move $$p_i$$ to the back of the queue, and continue until all normals are finalized.
@@ -57,12 +57,12 @@ Such points cannot easily be oriented and thus additional computation is needed;
 
 <p class="bibtex">
   @mastersthesis{CalebAdamsMSThesis, <br>
-    &emsp; author={Caleb Ashmore Adams}, <br>
-    &emsp; title={High Performance Computation with Small Satellites and Small Satellite Swarms for 3D Reconstruction}, <br>
-    &emsp; school={The University of Georgia}, <br>
-    &emsp; url={http://piepieninja.github.io/research-papers/thesis-pre-release.pdf},<br>
-    &emsp; year=2020, <br>
-    &emsp; month=may <br>
+    &nbsp; author={Caleb Ashmore Adams}, <br>
+    &nbsp; title={High Performance Computation with Small Satellites and Small Satellite Swarms for 3D Reconstruction}, <br>
+    &nbsp; school={The University of Georgia}, <br>
+    &nbsp; url={http://piepieninja.github.io/research-papers/thesis.pdf},<br>
+    &nbsp; year=2020, <br>
+    &nbsp; month=may <br>
   }
 </p>
 
