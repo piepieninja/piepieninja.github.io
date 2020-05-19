@@ -15,6 +15,7 @@
   function init() {
 
     container = document.createElement( 'div' );
+    container.setAttribute("id", "three-container");
     document.body.appendChild( container );
 
     camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 10000 );
@@ -59,10 +60,21 @@
   }
 
   function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
+
+    container = document.getElementById('three-container');
+    w = $(container).width();
+    h = $(container).height();
+    camera.aspect = w / h;
     camera.updateProjectionMatrix();
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    composer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( w , h );
+    renderer.setSize( w , h );
+    composer.setSize( w , h );
+
+
+    // camera.aspect = window.innerWidth / window.innerHeight;
+    // camera.updateProjectionMatrix();
+    // renderer.setSize( window.innerWidth, window.innerHeight );
+    // composer.setSize( window.innerWidth, window.innerHeight );
   }
 
   function createImage() {
@@ -87,54 +99,9 @@
 
   }
 
-  // function should_kill(i){
-  //   kill_num += i;
-  //   if (kill_num > 255){
-  //     kill_num = 0;
-  //     return true;
-  //   }
-  //   else {
-  //     return false;
-  //   }
-  // }
-
   function render() {
 
-    // if (should_kill(2) || first_guy) {
-    //   first_guy = false;
-    //
-    //   try {
-    //     scene.remove( mesh );
-    //
-    //     // clean up
-    //
-    //     geometry.dispose();
-    //     material.dispose();
-    //     texture.dispose();
-    //   } catch (e){
-    //
-    //   }
-    //
-    //   // geometry = new THREE.SphereBufferGeometry( 50, Math.random() * 64, Math.random() * 32 );
-    //   // texture = new THREE.CanvasTexture( createImage() );
-    //   // material = new THREE.MeshBasicMaterial( { map: texture, wireframe: true } );
-    //   // mesh = new THREE.Mesh( geometry, material );
-    //   //
-    //   // scene.add( mesh )
-    //
-    //   r_r_x = Math.random()/30;
-    //   if (Math.random() > .5){
-    //     r_r_y = Math.random()/30;
-    //   }
-    //   r_r_z = Math.random()/30;
-    //
-    // }
-
     renderer.render( scene, camera );
-
-    // mesh.rotation.x += r_r_x;
-    // mesh.rotation.y += r_r_y;
-    // mesh.rotation.z += r_r_z;
 
     scene.rotation.y += 0.001;
     // composer.render();
